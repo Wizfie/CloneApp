@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:paypal_app/screens/master.dart';
-import 'package:paypal_app/screens/signup.dart';
+import 'package:paypal_app/screens/Pages/login.dart';
+import 'package:paypal_app/screens/Pages/master.dart';
 import 'package:paypal_app/shared/custom_field.dart';
 import 'package:paypal_app/shared/rounded_button.dart';
 import 'package:paypal_app/utils/constants.dart';
 
-class Login extends StatelessWidget {
-  const Login({super.key});
+class SignUp extends StatelessWidget {
+  const SignUp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class Login extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Log In",
+                      "Sign Up",
                       style: TextStyle(
                           color: kPrimaryColor,
                           fontSize: 24,
@@ -33,12 +33,27 @@ class Login extends StatelessWidget {
                       height: 32,
                     ),
                     const CustomField(
+                      hinttext: "Fullname",
+                      iconData: Icons.person_outline,
+                      label: 'Fullname',
+                    ),
+                    const CustomField(
                       hinttext: "Email",
                       iconData: Icons.alternate_email,
                       label: 'Email',
                     ),
                     const CustomField(
-                      hinttext: "Password",
+                      hinttext: "Mobile number",
+                      iconData: Icons.phone,
+                      label: 'Mobile number',
+                    ),
+                    const CustomField(
+                      hinttext: "Create Password",
+                      iconData: Icons.lock_clock_outlined,
+                      label: 'Password',
+                    ),
+                    const CustomField(
+                      hinttext: "Confirm Password",
                       iconData: Icons.lock_clock_outlined,
                       label: 'Password',
                     ),
@@ -46,7 +61,7 @@ class Login extends StatelessWidget {
                       height: 32,
                     ),
                     RoundedButton(
-                      text: "Log In",
+                      text: "Sign Up",
                       onPress: () {
                         Navigator.push(
                           context,
@@ -58,7 +73,7 @@ class Login extends StatelessWidget {
                       height: 16,
                     ),
                     Text(
-                      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                      "Log In ",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: kGreyColor,
@@ -71,7 +86,7 @@ class Login extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("Do you have account ?",
+                        Text("Already  have account ?",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 color: kGreyColor,
@@ -84,12 +99,11 @@ class Login extends StatelessWidget {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(
-                                  builder: (context) => const SignUp()),
+                              MaterialPageRoute(builder: (context) => const Login()),
                             );
                           },
                           child: Text(
-                            "Sign Up",
+                            "Log In",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 color: kGreyColor,

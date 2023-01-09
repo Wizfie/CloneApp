@@ -33,7 +33,7 @@ class _MasterState extends State<Master> {
           currentWidgetView = const Dashboard();
           break;
         case 1:
-          currentWidgetView =  const Send();
+          currentWidgetView = const Send();
           break;
         case 2:
           currentWidgetView = const Request();

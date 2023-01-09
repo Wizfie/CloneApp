@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:paypal_app/screens/onboarding.dart';
+import 'package:paypal_app/screens/Pages/onboarding.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
